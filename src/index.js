@@ -23,5 +23,5 @@ app.use(notFound)
 app.use(errorHandler)
 
 app.listen(port, () => {
-  logger.info('Server is running on port ${port}')
+  logger.info(`Server running on port ${port}`)
 })
