@@ -42,7 +42,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
     const deleted = deletePerson(req.params.id)
     if (deleted) {
-        res.send({ msg: `Person ${req.params.id} has been Deleted` })
+        res.send({ msg: `Person ${req.params.id} has been Deleted.` })
     }
     res.status(404).send({msg: 'Person Not Found'}) 
 })
