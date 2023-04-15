@@ -11,3 +11,5 @@ export const getCompany = async (id) =>
   })
 
 export const addCompany = async (name) => db.company.create({ data: { name } })
+
+//comments
