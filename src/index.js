@@ -8,14 +8,14 @@ import bodyParser from 'body-parser'
 
 import logger from './utilities/logger'
 import router from './routes'
-import {notFound, errorHandler} from './utilities/errors'
+import { notFound, errorHandler } from './utilities/errors'
 
 const port = Number(process.env.PORT)
 
 const app = express()
 
 app.use(morgan(process.env.MORGAN_LOG))
-app.use(cors({origin: process.env.ORIGIN, exposedHeaders}, ['x-total-count', 'x-total-pages']))
+app.use(cors({ origin: process.env.ORIGIN, credentials: true }))
 app.use(helmet())
 app.use(bodyParser.json())
 
